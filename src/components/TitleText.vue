@@ -1,6 +1,6 @@
 <template>
   <div>
-    <p class="slot-text" ref="slotText" :class="{'is-animating': isAnimating, 'is-final': isFinalShowing}">{{ displayText }}</p>
+    <p class="slot-text" ref="slotText" :class="{'is-animating': isAnimating}">{{ displayText }}</p>
   </div>
 </template>
 
@@ -8,7 +8,6 @@
   import { ref, onMounted, onBeforeUnmount } from 'vue';
 
   const isAnimating = ref(false);
-  const isFinalShowing = ref(false);
 
   const finalText: string = 'Moomin';
   // 英数字からランダム文字を生成
