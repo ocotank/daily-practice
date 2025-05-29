@@ -12,5 +12,6 @@ export default defineConfig({
   },
   server: {
     port: 3000 // 好きなポート番号に変更
-  }
+  },
+  base: '/daily-practice/', // GitHub Pagesでのホスティング用
 });
