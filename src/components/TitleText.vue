@@ -11,7 +11,7 @@
 
   const finalText: string = 'Moomin';
   // 英数字からランダム文字を生成
-  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
   
   const displayText = ref<string>('');
   let intervalId: number | null = null;
@@ -25,7 +25,7 @@
   }
 
   // スロットのアニメーションを開始
-  function statSlot(): void {
+  function startSlot(): void {
     let count  = 0;
     intervalId = window.setInterval(() => {
       if( count < 15) {
@@ -47,7 +47,7 @@
   }
 
   onMounted(() => {
-    statSlot();
+    startSlot();
   });
   // コンポーネントがアンマウントされるときにインターバルをクリア
   onBeforeUnmount(() => {
